@@ -62,6 +62,7 @@
         }
     }
     function updateLocation(position) {
+        alert("!");
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
         var accuracy = position.coords.accuracy;
@@ -85,7 +86,7 @@
         lastLat = latitude;
         lastLong = longitude;
         updateStatus("Location successfully updated.");
-        alert("!!");
+        
     }
     function handleLocationError(error) {
         switch(error.code){

@@ -56,10 +56,15 @@
     function loadDemo() {
         if(navigator.geolocation) {
             updateStatus("HTML5 Geolocation is supported in your browser.");
-            navigator.geolocation.watchPosition(updateLocation,
-                                                handleLocationError,
-                                                {maximumAge:20000});
+           setInterval("track()",10000);
+                                               
+                                               
         }
+    }
+    function track(){
+        navigator.geolocation.getCurrentPosition(updateLocation,
+                                            handleLocationErr);
+                                            
     }
     function updateLocation(position) {
         alert("!");
